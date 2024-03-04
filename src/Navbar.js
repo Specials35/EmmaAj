@@ -7,7 +7,7 @@ const AppNavbar = () => {
             <Container fluid>
                 <Navbar.Brand>Navbar</Navbar.Brand>
 
-                <Nav className="align-content-md-start">
+                <Nav className="justify-content-start">
                     <Nav.Link href="#">Home</Nav.Link>
                     <Nav.Link href="#">About</Nav.Link>
                     <Nav.Link href="#">Contact</Nav.Link>
