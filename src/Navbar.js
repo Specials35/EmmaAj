@@ -1,5 +1,5 @@
 import React from 'react';
-import { Navbar, Nav } from 'react-bootstrap';
+import { Navbar, Nav, InputGroup, FormControl } from 'react-bootstrap';
 
 const AppNavbar = () => {
     return (
@@ -10,6 +10,18 @@ const AppNavbar = () => {
                 <Nav.Link href="#">About</Nav.Link>
                 <Nav.Link href="#">Contact</Nav.Link>
             </Nav>
+
+            // Make a search bar on the right.
+            <InputGroup>
+                <FormControl
+                    placeholder="Search"
+                    aria-label="Search"
+                    aria-describedby="basic-addon2"
+                />
+                <InputGroup.Append>
+                    <InputGroup.Text id="basic-addon2">Search</InputGroup.Text>
+                </InputGroup.Append>
+            </InputGroup>
         </Navbar>
     );
 }
