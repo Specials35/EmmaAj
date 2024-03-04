@@ -1,27 +1,29 @@
 import React from 'react';
-import { Navbar, Nav, InputGroup, FormControl } from 'react-bootstrap';
+import { Navbar, Nav, Container, Form, FormControl, Button } from 'react-bootstrap';
 
 const AppNavbar = () => {
     return (
-        <Navbar bg="dark" variant="dark">
-            <Navbar.Brand href="#">Navbar</Navbar.Brand>
-            <Nav className="mr-auto">
-                <Nav.Link href="#">Home</Nav.Link>
-                <Nav.Link href="#">About</Nav.Link>
-                <Nav.Link href="#">Contact</Nav.Link>
-            </Nav>
+        <Navbar bg="dark" variant="dark" className="border-bottom border-body">
+            <Container fluid>
 
-            // Make a search bar on the right.
-            <InputGroup>
-                <FormControl
-                    placeholder="Search"
-                    aria-label="Search"
-                    aria-describedby="basic-addon2"
-                />
-                <InputGroup.Append>
-                    <InputGroup.Text id="basic-addon2">Search</InputGroup.Text>
-                </InputGroup.Append>
-            </InputGroup>
+                <Navbar.Brand>Navbar</Navbar.Brand>
+                <Form className="d-flex" role="search">
+                    <FormControl
+                        type="search"
+                        placeholder="Search"
+                        className="me-2"
+                        aria-label="Search"
+                    />
+                    <Button variant="outline-success" type="submit">Search</Button>
+                </Form>
+
+                {/* Additional Nav links if needed */}
+                <Nav className="ml-auto">
+                    <Nav.Link href="#">Home</Nav.Link>
+                    <Nav.Link href="#">About</Nav.Link>
+                    <Nav.Link href="#">Contact</Nav.Link>
+                </Nav>
+            </Container>
         </Navbar>
     );
 }
